@@ -25,6 +25,22 @@ function agregarTarea() {
     }
 }
 
+function mostrarTareas() {
+
+    listaTareas.innerHTML = "";
+
+    for (let i = 0; i < tareas.length; i++) {
+
+        let elemento = document.createElement("li");
+
+        elemento.textContent = tareas[i].nombre;
+
+        listaTareas.appendChild(elemento);
+
+    }
+
+}
+
 tareaForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
