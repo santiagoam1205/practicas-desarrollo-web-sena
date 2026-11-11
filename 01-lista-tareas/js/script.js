@@ -41,6 +41,35 @@ function eliminarTarea(indice) {
 
 }
 
+function actualizarContadores() {
+
+    let total = tareas.length;
+
+    let completadas = 0;
+    let pendientes = 0;
+
+    for (let i = 0; i < tareas.length; i++) {
+
+        if (tareas[i].completada === true) {
+
+            completadas++;
+
+        } else {
+
+            pendientes++;
+
+        }
+
+    }
+
+    document.getElementById("totalTareas").textContent = total;
+
+    document.getElementById("tareasCompletadas").textContent = completadas;
+
+    document.getElementById("tareasPendientes").textContent = pendientes;
+
+}
+
 function mostrarTareas() {
 
     listaTareas.innerHTML = "";
@@ -96,6 +125,8 @@ function mostrarTareas() {
         listaTareas.appendChild(elemento);
 
     }
+
+        actualizarContadores();
 
 }
 
