@@ -10,3 +10,135 @@ body {
     color: #333333;
 }
 
+
+header {
+    background-color: #f07832;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+main {
+    width: 85%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.formulario {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+}
+
+.formulario form {
+    display: flex;
+    gap: 12px;
+}
+
+.formulario input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.formulario button {
+    background-color: #f07832;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contador {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contador h2 {
+    margin-bottom: 20px;
+}
+
+.contador p {
+    background-color: #fff0e5;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.contador span {
+    color: #f07832;
+    font-weight: bold;
+}
+
+.lista {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lista h2 {
+    margin-bottom: 20px;
+}
+
+.lista ul {
+    list-style: none;
+}
+
+.lista li {
+    background-color: #fff7f0;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 5px solid #f07832;
+}
+
+/* EL DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .formulario form {
+        flex-direction: column;
+    }
+
+    .formulario button {
+        width: 100%;
+    }
+
+    .formulario,
+    .contador,
+    .lista {
+        padding: 18px;
+    }
+
+}
