@@ -21,6 +21,16 @@ function agregarTarea() {
         tareas.push(nuevaTarea);
         tareaInput.value = "";
         console.log (tareas);
-        
+
     }
 }
+
+tareaForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    agregarTarea();
+
+    mostrarTareas();
+
+});
