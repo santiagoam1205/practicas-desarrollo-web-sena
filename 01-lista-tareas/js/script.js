@@ -25,6 +25,22 @@ function agregarTarea() {
     }
 }
 
+function completarTarea(indice) {
+
+    tareas[indice].completada = true;
+
+    mostrarTareas();
+
+}
+
+function eliminarTarea(indice) {
+
+    tareas.splice(indice, 1);
+
+    mostrarTareas();
+
+}
+
 function mostrarTareas() {
 
     listaTareas.innerHTML = "";
@@ -33,7 +49,49 @@ function mostrarTareas() {
 
         let elemento = document.createElement("li");
 
-        elemento.textContent = tareas[i].nombre;
+        let texto = document.createElement("span");
+
+        texto.textContent = tareas[i].nombre;
+
+        elemento.appendChild(texto);
+
+        if (tareas[i].completada === true) {
+
+            elemento.classList.add("completada");
+
+            texto.style.textDecoration = "line-through";
+
+        } else {
+
+            let botonCompletar = document.createElement("button");
+
+            botonCompletar.textContent = "Completar";
+
+            botonCompletar.type = "button";
+
+            botonCompletar.addEventListener("click", function() {
+
+                completarTarea(i);
+
+            });
+
+            elemento.appendChild(botonCompletar);
+
+        }
+
+        let botonEliminar = document.createElement("button");
+
+         botonEliminar.textContent = "Eliminar";
+
+         botonEliminar.type = "button";
+
+         botonEliminar.addEventListener("click", function() {
+
+          eliminarTarea(i);
+
+        });
+
+        elemento.appendChild(botonEliminar);
 
         listaTareas.appendChild(elemento);
 
