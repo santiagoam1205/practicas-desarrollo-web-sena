@@ -15,31 +15,33 @@
     </header>
 
     <main>
-        <section>
+        <section class="formulario">
             <h2>Mis tareas</h2>
 
-            <form>
+            <form id="tareaForm">
                 <input type="text" placeholder="Escribe una tarea...">
                 <button type="submit">Agregar tarea</button>
             </form>
         </section>
 
-        <section>
+        <section class="contador">
             <h2>Progresion</h2>
 
-            <p>Total de Tareas: 0</p>
-            <p>Completadas: 0</p>
-            <p>Pendientes: 0</p>
+            <p>Total de Tareas:<span id="totalTareas">0</span></p>
+
+            <p>Completadas: <span id="tareasCompletadas">0</span></p>
+            
+            <p>Pendientes: <span id="tareasPendientes">0</span></p>
+        
         </section>
 
-        <section>
+        <section class="lista">
             <h2>Lista de actividades</h2>
 
-            <ul>
-
+            <ul id="listaTareas">
             </ul>
         </section>
-        
+
     </main>
 </body>
 </html>
