@@ -8,6 +8,49 @@
     <script src="js/app.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <h1>Tienda Virtual</h1>
+        <p>Encuentra los mejores productos para ti</p>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="catalogo">
+            <h2>Catálogo de productos</h2>
+
+            <div id="filtros" class="filtros">
+                
+            </div>
+
+            <p id="contador-productos"></p>
+
+            <div id="lista-productos" class="lista-productos">
+                
+            </div>
+        </section>
+
+        <section class="carrito">
+            <h2>Carrito de compras</h2>
+
+            <div id="lista-carrito">
+                <p>Tu carrito está vacío</p>
+            </div>
+
+            <button id="vaciar-carrito" type="button">
+                Vaciar carrito
+            </button>
+
+            <div class="resumen">
+                <h3>Resumen de compra</h3>
+
+                <p>Artículos: <span id="total-articulos">0</span></p>
+                <p>Subtotal: <span id="subtotal">$ 0</span></p>
+                <p>Descuento: <span id="descuento">$ 0</span></p>
+                <p>Total: <span id="total">$ 0</span></p>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>
